@@ -7,8 +7,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/*
+Сервлет, определяющий тип запроса, и, в зависимости от того,
+содержит ли запрос информацию о координатах точки и радиусе,
+делегирующий его обработку одному из перечисленных ниже компонентов.
+
+Все запросы внутри приложения должны передаваться этому сервлету
+(по методу GET или POST в зависимости от варианта задания),
+остальные сервлеты с веб-страниц напрямую вызываться не должны.
+ */
+
 @WebServlet("webServlet")
-public class HttpServletController extends HttpServlet {
+public class ControllerServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
