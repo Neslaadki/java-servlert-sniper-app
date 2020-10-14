@@ -19,10 +19,6 @@ public class RequestObj {
         this.r = r;
     }
 
-    public void setIs_hit(boolean is_hit) {
-        this.is_hit = is_hit;
-    }
-
     public double getX() {
         return x;
     }
@@ -39,12 +35,16 @@ public class RequestObj {
         return is_hit;
     }
 
-    public void check_hit(){
+    public void setIs_hit(boolean is_hit) {
+        this.is_hit = is_hit;
+    }
+    
+    public void check_hit() {
         if (x == null || y == null || r == null) throw new NullPointerException();
-        if ((x == 0 && Math.abs(y)<=r) || (y == 0&& Math.abs(x)<=r)) is_hit = true;
-        else if ((x > 0) && (y < 0))    is_hit = false;
-        else if ((x > 0) && (y > 0))    is_hit = y <= r - x;
-        else if ((x < 0) && (y > 0))    is_hit = x  * x + y * y <= r * r;
-        else if ((x < 0) && (y < 0))    is_hit = (x>=-r/2)&&(y>=-r);
+        if ((x == 0 && Math.abs(y) <= r) || (y == 0 && Math.abs(x) <= r)) is_hit = true;
+        else if ((x > 0) && (y < 0)) is_hit = (x <= r / 2) && (y >= -r);
+        else if ((x > 0) && (y > 0)) is_hit = false;
+        else if ((x < 0) && (y > 0)) is_hit = y - x <= r;
+        else if ((x < 0) && (y < 0)) is_hit = x * x + y * y <= (-r / 2) * (-r / 2);
     }
 }
