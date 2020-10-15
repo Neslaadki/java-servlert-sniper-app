@@ -17,25 +17,20 @@ import java.io.IOException;
 остальные сервлеты с веб-страниц напрямую вызываться не должны.
  */
 
-@WebServlet("webServlet")
+@WebServlet("/webServletTest")
 public class ControllerServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        getServletContext().getRequestDispatcher("some.jsp").forward(req,resp);
+        Double x = Double.parseDouble(req.getParameter("X"));
+        Double y = Double.parseDouble(req.getParameter("Y"));
+        Double r = Double.parseDouble(req.getParameter("R"));
+
+        getServletContext().getRequestDispatcher("/areaCheckServlet").forward(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Double x = Double.parseDouble(req.getParameter("x"));
-        Double y = Double.parseDouble(req.getParameter("y"));
-        Double r = Double.parseDouble(req.getParameter("r"));
-
-        getServletContext().getRequestDispatcher("/areaCheckServlet").forward(req, resp);
-        getServletContext().getRequestDispatcher("/main_page.jsp").forward(req, resp);
-
-        resp.getWriter().append("ERROR!");
-        resp.getWriter().close();
-
+        getServletContext().getRequestDispatcher("main.jsp").forward(req,resp);
     }
 }
