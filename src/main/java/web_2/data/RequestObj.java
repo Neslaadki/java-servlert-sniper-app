@@ -41,9 +41,10 @@ public class RequestObj {
 
     public void check_hit() {
         if (x == null || y == null || r == null) throw new NullPointerException();
-        else if ((x >= 0) && (y <= 0)) is_hit = (x <= r/2) && (y >= -r);
-        else if ((x >= 0) && (y >= 0)) is_hit = (x*x)+(y*y)==(r/2)*(r/2);
-        else if ((x <= 0) && (y >= 0)) is_hit = (y/2)-x == r/2;
-        else if ((x <= 0) && (y <= 0)) is_hit = false;
+        else if ((x == 0) && (y == 0)) is_hit = true;
+        else if ((x > 0) && (y < 0)) is_hit = (x <= r / 2) && (y >= -r);
+        else if ((x > 0) && (y > 0)) is_hit = false;
+        else if ((x < 0) && (y > 0)) is_hit = y - x <= r;
+        else if ((x < 0) && (y < 0)) is_hit = x * x + y * y <= (-r / 2) * (-r / 2);
     }
 }
