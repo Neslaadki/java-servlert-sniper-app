@@ -18,14 +18,14 @@ Servlet, осуществляющий проверку попадания точ
   Должен обрабатывать все запросы, содержащие сведения о координатах точки и радиусе области.
  */
 
-@WebServlet
+@WebServlet("/areaCheckServlet")
 public class AreaCheckServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Double x = Double.parseDouble(req.getParameter("X"));
-        Double y = Double.parseDouble(req.getParameter("Y"));
-        Double r = Double.parseDouble(req.getParameter("R"));
+        Double x = Double.parseDouble(req.getParameter("x_value"));
+        Double y = Double.parseDouble(req.getParameter("y_value"));
+        Double r = Double.parseDouble(req.getParameter("r_value"));
 
         HttpSession session = req.getSession();
         RequestDataList requestData = (RequestDataList) session.getAttribute("requestData");
@@ -38,6 +38,7 @@ public class AreaCheckServlet extends HttpServlet {
         requestObj.check_hit();
 
         requestData.addEntry(requestObj);
+        responseResult(requestObj, resp);
         session.setAttribute("requestData", requestData);
     }
 
@@ -52,7 +53,9 @@ public class AreaCheckServlet extends HttpServlet {
                 "<body>" +
                 "  <div >" +
                         "тут будет наша страница" +
-                "  </div>" + "</body></html>";
+                "  </div>" +
+                "</body>" +
+                "</html>";
         resp.setContentType("text/html; charset=UTF-8");
         resp.getWriter().write(result);
         resp.getWriter().close();
