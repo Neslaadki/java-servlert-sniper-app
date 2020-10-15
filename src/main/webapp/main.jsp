@@ -7,8 +7,8 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lab1</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="form_style.css">
+    <link rel="stylesheet" href="StyleSheets/style.css">
+    <link rel="stylesheet" href="StyleSheets/form_style.css">
 </head>
 
 <body>
