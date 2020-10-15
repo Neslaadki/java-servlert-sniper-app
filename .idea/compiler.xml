@@ -15,7 +15,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="web_2" options="-endorseddirs $PROJECT_DIR$/target/endorsed" />
+      <module name="web_2" options="-endorseddirs C:\Users\79312\Desktop\GitHub\javaeeServlets\target/endorsed" />
     </option>
   </component>
 </project>
