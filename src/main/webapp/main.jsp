@@ -69,23 +69,20 @@
         <div class="block__column">
             <div class="block__item">
                 <div class='style_block'>
-                    <form class="form" method="GET" id="_form" action="webServlet">
+                    <form class="form" id="_form">
 
                         <!--X Coordinate-->
-                        <div class="item_x" id="_x">
+                        <div class="item_x">
                             <label> Координата X:
-                                <select class="x" name="x_value" id="select_x" form="_form">
-                                    <option selected value="no"> Не выбрано </option>
-                                    <option value="-3"> -3 </option>
-                                    <option value="-2"> -2 </option>
-                                    <option value="-1"> -1 </option>
-                                    <option value="0"> 0 </option>
-                                    <option value="1"> 1 </option>
-                                    <option value="2"> 2 </option>
-                                    <option value="3"> 3 </option>
-                                    <option value="4"> 4 </option>
-                                    <option value="5"> 5 </option>
-                                </select>
+                                <label><input type="checkbox" name="r_value" value="-2" form="_form">-2</label>
+                                <label><input type="checkbox" name="r_value" value="-1.5" form="_form">-1.5</label>
+                                <label><input type="checkbox" name="r_value" value="-1" form="_form">-1</label>
+                                <label><input type="checkbox" name="r_value" value="-0.5" form="_form">-0.5</label>
+                                <label><input type="checkbox" name="r_value" value="0" form="_form">0</label>
+                                <label><input type="checkbox" name="r_value" value="0.5" form="_form">0.5</label>
+                                <label><input type="checkbox" name="r_value" value="1.0" form="_form">1.0</label>
+                                <label><input type="checkbox" name="r_value" value="1.5" form="_form">1.5</label>
+                                <label><input type="checkbox" name="r_value" value="2" form="_form">2</label>
                             </label>
                         </div>
 
@@ -99,14 +96,11 @@
                         <!--R Radius-->
                         <div class="item_radius">
                             <label> Радиус R:
-                                <select class="r" name="r_value" id="_r" form="_form">
-                                    <option selected value="no"> Не выбрано </option>
-                                    <option value="1"> 1 </option>
-                                    <option value="2"> 2 </option>
-                                    <option value="3"> 3 </option>
-                                    <option value="4"> 4 </option>
-                                    <option value="5"> 5 </option>
-                                </select>
+                                <label><input type="checkbox" name="r_value" value="1" form="_form">1</label>
+                                <label><input type="checkbox" name="r_value" value="2" form="_form">2</label>
+                                <label><input type="checkbox" name="r_value" value="3" form="_form">3</label>
+                                <label><input type="checkbox" name="r_value" value="4" form="_form">4</label>
+                                <label><input type="checkbox" name="r_value" value="5" form="_form">5</label>
                             </label>
                         </div>
 

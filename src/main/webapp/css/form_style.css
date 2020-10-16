@@ -1,5 +1,9 @@
 form#_form {
     height: 150px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
 }
 
 table.iksweb {
@@ -48,13 +52,3 @@ table.iksweb tr:hover td {
     height: 295px;
 }
 
-button .send,
-.reset {
-    text-align: center;
-}
-
-.item_x,
-.item_y,
-.item_radius {
-    text-align: center;
-}
