@@ -33,7 +33,7 @@ function validate_x_value(x_value) {
 
     //проверка на все остальное
     if (success_x_value !== 'no' && success_x_value !== null) {
-        if (-3 <= success_x_value && success_x_value <= 5 && i === 1) {
+        if (-2 <= success_x_value && success_x_value <= 2 && i === 1) {
             return true;
         } else {
             if (i > 1) {
@@ -53,7 +53,7 @@ function validate_x_value(x_value) {
 function validate_y_value(y_value) {
     console.log(y_value);
     if (y_value !== 'no' && y_value !== null) {
-        if (/^(-?\d+)([,.]\d+)?$/.test(y_value) && y_value.replace(',', '.') >= -5 && y_value.replace(',', '.') <= 3) {
+        if (/^(-?\d+)([,.]\d+)?$/.test(y_value) && y_value.replace(',', '.') >= -5 && y_value.replace(',', '.') <= 5) {
             return true;
         } else {
             error_message += 'Неверный формат значения координаты Y!\n';
