@@ -1,7 +1,6 @@
 <%--/Страница JSP, формирующая HTML-страницу с веб-формой. Должна обрабатывать все запросы, не содержащие сведений о координатах точки и радиусе области.--%>
 
 <%@ page contentType="text/html;charset=UTF-8" %>
-<html>
 <html lang="en">
 
 <head>
@@ -64,10 +63,12 @@
         <div class="block__column">
             <div class="block__item">
                 <div class='style_block'>
-                    <form class="form" method="POST" id="_form">
+                    <form class="form" method="GET" id="_form" action="webServlet">
+
+                        <!--X Coordinate-->
                         <div class="item_x" id="_x">
                             <label> Координата X:
-                                <select class="x" name="select_x" id="select_x" form="_form">
+                                <select class="x" name="x_value" id="select_x" form="_form">
                                     <option selected value="no"> Не выбрано </option>
                                     <option value="-3"> -3 </option>
                                     <option value="-2"> -2 </option>
@@ -81,32 +82,39 @@
                                 </select>
                             </label>
                         </div>
+
+                        <!--Y Coordinate-->
                         <div class="item_y">
                             <label> Координата Y:
-                                <input class="y" size="12px" id="_y" name="input_y" form="_form" type="text" maxlength="8" placeholder="от -5 до 3" data-rule="number">
+                                <input class="y" size="12px" id="_y" name="y_value" form="_form" type="text" maxlength="8" placeholder="от -5 до 3" data-rule="number">
                             </label>
                         </div>
+
+                        <!--R Radius-->
                         <div class="item_radius">
                             <label> Радиус R:
-                                <select class="r" name="select_r" id="_r" form="_form">
+                                <select class="r" name="r_value" id="_r" form="_form">
                                     <option selected value="no"> Не выбрано </option>
-                                    <option value="1 "> 1 </option>
-                                    <option value="2 "> 2 </option>
-                                    <option value="3 "> 3 </option>
-                                    <option value="4 "> 4 </option>
-                                    <option value="5 "> 5 </option>
+                                    <option value="1"> 1 </option>
+                                    <option value="2"> 2 </option>
+                                    <option value="3"> 3 </option>
+                                    <option value="4"> 4 </option>
+                                    <option value="5"> 5 </option>
                                 </select>
                             </label>
                         </div>
-                        <div>
 
+                        <!--Buttons-->
+                        <div>
                             <button class="send" type="submit" form="_form"> Отправить </button>
                             <button class="reset" type="reset" form="_form"> Сбросить </button>
                             <button class="resetTable"> Очистить таблицу </button>
                         </div>
+
                     </form>
                 </div>
                 <div>
+                    <!--Response table-->
                     <div class="mobile-table">
                         <table class="iksweb" id="resultTable">
                             <thead>
@@ -130,9 +138,7 @@
     </div>
 </div>
 </body>
-<script src="js/jquery-3.5.1.min.js"></script>
-<script src="js/painter.js "></script>
-<script src="js/response.js "></script>
-
-
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/painter.js "></script>
+    <script src="js/response.js "></script>
 </html>
