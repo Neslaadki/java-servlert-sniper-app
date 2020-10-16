@@ -5,21 +5,24 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lab1</title>
-    <link rel="stylesheet" href="StyleSheets/style.css">
-    <link rel="stylesheet" href="StyleSheets/form_style.css">
+    <title>Работа №2</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form_style.css">
+
 </head>
 
 <body>
 <div>
     <header>
         <h1>
-            Проверка попадания точки в заданную область
+            Разработать веб-приложение на базе сервлетов и JSP, определяющее попадание точки на координатной плоскости в заданную область.
         </h1>
         <p>
-            <a href="https://isu.ifmo.ru/pls/apex/f?p=2437:7:109996409750410:::::" target="_blank">Дзюбак Антон Михайлович P3214</a>
-            <br> Вариант - 2502
+            <a href="https://vk.com/neslaaadki" target="_blank">Дзюбак Антон Михайлович P3214</a> <br>
+            <a href="https://vk.com/ali_alibekovich" target="_blank">Чупанов Али Алибекович P3214</a>
+            <br> Вариант - 92184
         </p>
     </header>
 </div>
@@ -27,7 +30,7 @@
     <div class="block">
         <div class="block__column">
             <div class="block__item">
-                <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300">
+                <svg class='svg_axis' xmlns="http://www.w3.org/2000/svg" width="300" height="300">
 
                     <!-- draw axis - -->
                     <line x1="0" y1="150" x2="300" y2="150" stroke="#003"></line>
@@ -60,10 +63,9 @@
         </div>
         <div class="block__column">
             <div class="block__item">
-                <div style="background-color: rgb(9, 166, 172); border-bottom: 4px solid rgb(92, 90, 90);">
-
+                <div class='style_block'>
                     <form class="form" method="POST" id="_form">
-                        <div class="item_x" style="text-align: center;" id="_x">
+                        <div class="item_x" id="_x">
                             <label> Координата X:
                                 <select class="x" name="select_x" id="select_x" form="_form">
                                     <option selected value="no"> Не выбрано </option>
@@ -79,12 +81,12 @@
                                 </select>
                             </label>
                         </div>
-                        <div class="item_y" style="text-align: center;">
+                        <div class="item_y">
                             <label> Координата Y:
-                                <input class="y" size="12px" id="_y" name="input_y" form="_form" type="text" maxlength="8" placeholder="от -5 до 5" data-rule="number">
+                                <input class="y" size="12px" id="_y" name="input_y" form="_form" type="text" maxlength="8" placeholder="от -5 до 3" data-rule="number">
                             </label>
                         </div>
-                        <div class="item_radius" style="text-align: center;">
+                        <div class="item_radius">
                             <label> Радиус R:
                                 <select class="r" name="select_r" id="_r" form="_form">
                                     <option selected value="no"> Не выбрано </option>
@@ -128,4 +130,9 @@
     </div>
 </div>
 </body>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/painter.js "></script>
+<script src="js/response.js "></script>
+
+
 </html>
