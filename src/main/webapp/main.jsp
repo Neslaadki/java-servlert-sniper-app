@@ -69,33 +69,33 @@
         <div class="block__column">
             <div class="block__item">
                 <div class='style_block'>
-                    <form class="form" id="_form">
+                    <form class="form" id="_form" onsubmit="return validation()">
 
                         <!--X Coordinate-->
                         <div class="item_x">
                             <label> Координата X:
-                                <label><input type="checkbox" name="r_value" value="-2" form="_form">-2</label>
-                                <label><input type="checkbox" name="r_value" value="-1.5" form="_form">-1.5</label>
-                                <label><input type="checkbox" name="r_value" value="-1" form="_form">-1</label>
-                                <label><input type="checkbox" name="r_value" value="-0.5" form="_form">-0.5</label>
-                                <label><input type="checkbox" name="r_value" value="0" form="_form">0</label>
-                                <label><input type="checkbox" name="r_value" value="0.5" form="_form">0.5</label>
-                                <label><input type="checkbox" name="r_value" value="1.0" form="_form">1.0</label>
-                                <label><input type="checkbox" name="r_value" value="1.5" form="_form">1.5</label>
-                                <label><input type="checkbox" name="r_value" value="2" form="_form">2</label>
+                                <label><input type="checkbox" name="x_value" value="-2" form="_form">-2</label>
+                                <label><input type="checkbox" name="x_value" value="-1.5" form="_form">-1.5</label>
+                                <label><input type="checkbox" name="x_value" value="-1" form="_form">-1</label>
+                                <label><input type="checkbox" name="x_value" value="-0.5" form="_form">-0.5</label>
+                                <label><input type="checkbox" name="x_value" value="0" form="_form">0</label>
+                                <label><input type="checkbox" name="x_value" value="0.5" form="_form">0.5</label>
+                                <label><input type="checkbox" name="x_value" value="1.0" form="_form">1.0</label>
+                                <label><input type="checkbox" name="x_value" value="1.5" form="_form">1.5</label>
+                                <label><input type="checkbox" name="x_value" value="2" form="_form">2</label>
                             </label>
                         </div>
 
                         <!--Y Coordinate-->
                         <div class="item_y">
-                            <label> Координата Y:
+                            <label > Координата Y:
                                 <input class="y" size="12px" id="_y" name="y_value" form="_form" type="text" maxlength="8" placeholder="от -5 до 3" data-rule="number">
                             </label>
                         </div>
 
                         <!--R Radius-->
                         <div class="item_radius">
-                            <label> Радиус R:
+                            <label id="r_value"> Радиус R:
                                 <label><input type="checkbox" name="r_value" value="1" form="_form">1</label>
                                 <label><input type="checkbox" name="r_value" value="2" form="_form">2</label>
                                 <label><input type="checkbox" name="r_value" value="3" form="_form">3</label>
@@ -106,7 +106,7 @@
 
                         <!--Buttons-->
                         <div>
-                            <button class="send" type="submit" form="_form"> Отправить </button>
+                            <button class="send" type="submit" form="_form" id="send"> Отправить </button>
                             <button class="reset" type="reset" form="_form"> Сбросить </button>
                             <button class="resetTable"> Очистить таблицу </button>
                         </div>
@@ -137,8 +137,5 @@
     </div>
 </div>
 </body>
-
-<script src="js/jquery-3.5.1.min.js"></script>
 <script src="js/response.js "></script>
-
 </html>
