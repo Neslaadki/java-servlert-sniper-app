@@ -54,15 +54,24 @@ header a:hover {
     border-radius: 25px;
 }
 
+.block__svg{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .style_block {
     background-color: rgb(192, 181, 84);
     border-bottom: 4px solid rgb(0, 0, 0);
 }
-/* img .coordunate */
 
-svg.svg_axis {
-    top: 50%
-}
+
+/* img .coordunate */
 
 label {
     font-size: 25px;
