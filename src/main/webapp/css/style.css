@@ -42,7 +42,7 @@ header a:hover {
 
 .block__item {
     border: 20px solid rgb(0, 0, 0);
-    width: 450px;
+    width: 500px;
     height: 450px;
     text-align: center;
     background-color: rgba(192, 181, 84, 0.6);

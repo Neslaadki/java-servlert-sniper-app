@@ -74,6 +74,7 @@
                         <!--X Coordinate-->
                         <div class="item_x">
                             <label> Координата X:
+                                <br>
                                 <label><input type="checkbox" name="x_value" value="-2" form="_form">-2</label>
                                 <label><input type="checkbox" name="x_value" value="-1.5" form="_form">-1.5</label>
                                 <label><input type="checkbox" name="x_value" value="-1" form="_form">-1</label>
@@ -89,7 +90,7 @@
                         <!--Y Coordinate-->
                         <div class="item_y">
                             <label > Координата Y:
-                                <input class="y" size="12px" id="_y" name="y_value" form="_form" type="text" maxlength="8" placeholder="от -5 до 3" data-rule="number">
+                                <input class="y" size="12px" id="_y" name="y_value" form="_form" type="text" maxlength="8" placeholder="от -5 до 5" data-rule="number">
                             </label>
                         </div>
 
