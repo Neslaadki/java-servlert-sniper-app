@@ -1,8 +1,6 @@
-<%--/Страница JSP, формирующая HTML-страницу с веб-формой. Должна обрабатывать все запросы, не содержащие сведений о координатах точки и радиусе области.--%>
-
-    <%@ page contentType="text/html;charset=UTF-8" %>
-<%--/Страница JSP, формирующая HTML-страницу с веб-формой. Должна обрабатывать все запросы, не содержащие сведений о координатах точки и радиусе области.--%>
-
+<%@ page import="web_2.data.RequestObj" %>
+<%@ page import="web_2.data.RequestDataList" %><%--/Страница JSP, формирующая HTML-страницу с веб-формой. Должна обрабатывать все запросы, не содержащие сведений о координатах точки и радиусе области.--%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html lang="en">
 
@@ -127,9 +125,21 @@
                                 <th>Время выполнения</th>
                             </tr>
                             </thead>
-                            <tbody>
-
-                            </tbody>
+                                <%
+                                    RequestDataList names = (RequestDataList)pageContext.getServletContext().getAttribute("requestData");
+                                    if(names!=null) {
+                                        for (RequestObj s : names.getDataList()) {
+                                            out.println("<tbody>");
+                                            out.println("<td>" + s.getX() + "</td>");
+                                            out.println("<td>" + s.getY() + "</td>");
+                                            out.println("<td>" + s.getR() + "</td>");
+                                            out.println("<td>" + s.isIs_hit() + "</td>");
+                                            out.println("<td>" + s.getDate() + "</td>");
+                                            out.println("<td>" + s.getMicroseconds() + "</td>");
+                                            out.println("</tbody>");
+                                        }
+                                    }
+                                %>
                         </table>
                     </div>
                 </div>
