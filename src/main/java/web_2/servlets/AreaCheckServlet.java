@@ -50,10 +50,14 @@ public class AreaCheckServlet extends HttpServlet {
                         "    <meta charset=\"utf-8\" /> " +
                         "    <meta name=\"viewport\" content=\"width=device-width initial-scale=1\">\n" +
                         "    <link rel=\"stylesheet\" href=\"css/form_style.css\">" +
+                        "    <link rel=\"stylesheet\" href=\"css/servlet_table.css\">" +
                         "    <title>Лабораторная работа №2</title>\n" +
                         "  </head>" +
                         "<body>" +
-                        "   <table class=\"iksweb\" id=\"resultTable\">\n" +
+                        " <div class='block_'>" +
+                        "  <div class='block__1'>" +
+                        "  <h1 align=center style='color:white;'>Результат операции</h3>" +
+                        "   <table class=\"res_table\" id=\"resultTable\">\n" +
                         "       <thead>\n" +
                         "           <tr>\n" +
                         "               <th>X</th>\n" +
@@ -73,9 +77,13 @@ public class AreaCheckServlet extends HttpServlet {
                         "           <td>" + requestObj.getMicroseconds() + " ms </td>\n" +
                         "       </tbody>\n" +
                         "   </table>" +
+                        "   <br>" +
+                        "   <br>" +
                         "   <form action=\"/web_2-1.0-SNAPSHOT/webServlet\">" +
-                        "       <button type=\"submit\">Click me</button>" +
+                        "       <button type=\"submit\">Вырнуться обратно</button>" +
                         "   </from>" +
+                        "  </div>" +
+                        " </div>" +
                         "</body>" +
                         "</html>";
         resp.setContentType("text/html; charset=UTF-8");

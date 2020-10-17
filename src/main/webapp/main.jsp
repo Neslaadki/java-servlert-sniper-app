@@ -88,7 +88,7 @@
                         <!--Y Coordinate-->
                         <div class="item_y">
                             <label > Координата Y -
-                                <input class="y" size="12px" id="y_value" form="_form" type="text" maxlength="8" placeholder="от -5 до 5" data-rule="number">
+                                <input class="y" size="12px" id="y_value" name="y_value" form="_form" type="text" maxlength="8" placeholder="от -5 до 5" data-rule="number">
                             </label>
                         </div>
 
