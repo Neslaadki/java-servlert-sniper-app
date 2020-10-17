@@ -71,35 +71,36 @@
 
                         <!--X Coordinate-->
                         <div class="item_x">
-                            <label> Координата X:
+                            <label> Координата X
                                 <br>
-                                <label><input type="checkbox" name="x_value" value="-2" form="_form">-2</label>
-                                <label><input type="checkbox" name="x_value" value="-1.5" form="_form">-1.5</label>
-                                <label><input type="checkbox" name="x_value" value="-1" form="_form">-1</label>
-                                <label><input type="checkbox" name="x_value" value="-0.5" form="_form">-0.5</label>
-                                <label><input type="checkbox" name="x_value" value="0" form="_form">0</label>
-                                <label><input type="checkbox" name="x_value" value="0.5" form="_form">0.5</label>
-                                <label><input type="checkbox" name="x_value" value="1.0" form="_form">1.0</label>
-                                <label><input type="checkbox" name="x_value" value="1.5" form="_form">1.5</label>
-                                <label><input type="checkbox" name="x_value" value="2" form="_form">2</label>
+                                <label class="checkbox-label"><input type="checkbox" name="x_value" value="-2" form="_form">-2</label>
+                                <label class="checkbox-label"><input type="checkbox" name="x_value" value="-1.5" form="_form">-1.5</label>
+                                <label class="checkbox-label"><input type="checkbox" name="x_value" value="-1" form="_form">-1</label>
+                                <label class="checkbox-label"><input type="checkbox" name="x_value" value="-0.5" form="_form">-0.5</label>
+                                <label class="checkbox-label"><input type="checkbox" name="x_value" value="0" form="_form">0</label>
+                                <label class="checkbox-label"><input type="checkbox" name="x_value" value="0.5" form="_form">0.5</label>
+                                <label class="checkbox-label"><input type="checkbox" name="x_value" value="1.0" form="_form">1.0</label>
+                                <label class="checkbox-label"><input type="checkbox" name="x_value" value="1.5" form="_form">1.5</label>
+                                <label class="checkbox-label"><input type="checkbox" name="x_value" value="2" form="_form">2</label>
                             </label>
                         </div>
 
                         <!--Y Coordinate-->
                         <div class="item_y">
-                            <label > Координата Y:
+                            <label > Координата Y -
                                 <input class="y" size="12px" id="_y" name="y_value" form="_form" type="text" maxlength="8" placeholder="от -5 до 5" data-rule="number">
                             </label>
                         </div>
 
                         <!--R Radius-->
                         <div class="item_radius">
-                            <label id="r_value"> Радиус R:
-                                <label><input type="checkbox" name="r_value" value="1" form="_form">1</label>
-                                <label><input type="checkbox" name="r_value" value="2" form="_form">2</label>
-                                <label><input type="checkbox" name="r_value" value="3" form="_form">3</label>
-                                <label><input type="checkbox" name="r_value" value="4" form="_form">4</label>
-                                <label><input type="checkbox" name="r_value" value="5" form="_form">5</label>
+                            <label id="r_value"> Радиус R
+                                <br>
+                                <label class="checkbox-label"><input type="checkbox" name="r_value" value="1" form="_form">1</label>
+                                <label class="checkbox-label"><input type="checkbox" name="r_value" value="2" form="_form">2</label>
+                                <label class="checkbox-label"><input type="checkbox" name="r_value" value="3" form="_form">3</label>
+                                <label class="checkbox-label"><input type="checkbox" name="r_value" value="4" form="_form">4</label>
+                                <label class="checkbox-label"><input type="checkbox" name="r_value" value="5" form="_form">5</label>
                             </label>
                         </div>
 
