@@ -88,7 +88,7 @@
                         <!--Y Coordinate-->
                         <div class="item_y">
                             <label > Координата Y -
-                                <input class="y" size="12px" id="_y" name="y_value" form="_form" type="text" maxlength="8" placeholder="от -5 до 5" data-rule="number">
+                                <input class="y" size="12px" id="y_value" form="_form" type="text" maxlength="8" placeholder="от -5 до 5" data-rule="number">
                             </label>
                         </div>
 
@@ -106,9 +106,9 @@
 
                         <!--Buttons-->
                         <div>
-                            <button class="send" type="submit" form="_form" id="send"> Отправить </button>
+                            <button class="send" type="submit" form="_form" id="send" onclick="return validation()"> Отправить </button>
                             <button class="reset" type="reset" form="_form"> Сбросить </button>
-                            <button class="resetTable"> Очистить таблицу </button>
+                            <button class="resetTable" type="submit" form="_form"> Очистить таблицу </button>
                         </div>
 
                     </form>
