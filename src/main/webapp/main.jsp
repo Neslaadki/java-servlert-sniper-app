@@ -108,9 +108,7 @@
                         <div>
                             <button class="send" type="submit" form="_form" id="send" onclick="return validation()"> Отправить </button>
                             <button class="reset" type="reset" form="_form"> Сбросить </button>
-                            <button class="resetTable" type="submit" form="_form"> Очистить таблицу </button>
                         </div>
-
                     </form>
                 </div>
                 <div>
@@ -143,6 +141,9 @@
                                 %>
                         </table>
                     </div>
+                    <form action="Cleaner">
+                        <button class="resetTable" type="submit" id="clean_button"> Очистить таблицу </button>
+                    </form>
                 </div>
             </div>
         </div>

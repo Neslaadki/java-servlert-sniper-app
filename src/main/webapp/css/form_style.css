@@ -49,6 +49,9 @@ table.iksweb tr:hover td {
     width: 100%;
     max-width: 100%;
     overflow-x: auto;
-    height: 265px;
+    height: 245px;
 }
 
+#clean_button {
+    width: 100%;
+}
