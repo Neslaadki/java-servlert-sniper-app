@@ -8,3 +8,10 @@ button {
     display: inline-block;
     font-size: 12px;
 }
+button:hover{
+    cursor: pointer;
+}
+
+#clean_button {
+    width: 100%;
+}
