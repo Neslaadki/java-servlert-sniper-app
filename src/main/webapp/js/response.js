@@ -1,5 +1,5 @@
 let x_value = document.getElementsByName("x_value");
-let y_value = document.getElementById("_y");
+let y_value = document.getElementById("y_value");
 let r_value = document.getElementsByName("r_value");
 
 let error_message = '';
@@ -31,9 +31,6 @@ function validate_y_value(y_value) {
     }
     return false;
 }
-
-
-
 
 //Валидация array_value чекбоксов
 function validate_checkbox(array_value, name, min_value, max_value) {

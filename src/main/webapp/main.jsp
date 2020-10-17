@@ -149,5 +149,5 @@
     </div>
 </div>
 </body>
-<script src="js/response.js "></script>
+<script src="js/response.js"></script>
 </html>
