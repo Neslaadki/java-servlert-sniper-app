@@ -1,5 +1,6 @@
 let radiusValue = 0;
 
+
 let radius_is_installed = document.querySelector('#r_value').onclick = function (){
 
     if (validate_checkbox(r_value,"R",1,5)){
@@ -18,6 +19,20 @@ let radius_is_installed = document.querySelector('#r_value').onclick = function 
         document.querySelector('#radius-text-left-half').innerHTML = half_value;
         document.querySelector('#radius-text-top-half').innerHTML = half_value;
         document.querySelector('#radius-text-bottom-half').innerHTML = half_value;
+
+
+        let r_changer = document.getElementsByName("points");
+
+        r_changer.forEach(function (concrete_value) {
+            let r_value = concrete_value.getAttribute('r');
+            let x_value = concrete_value.getAttribute('cx');
+            let y_value = concrete_value.getAttribute('cy');
+
+            concrete_value.setAttribute('cx', String(x_value*r_value/radiusValue));
+            concrete_value.setAttribute('cy', String(y_value*r_value/radiusValue))
+        })
+
+
         return 1;
     }else return 0;
 }
