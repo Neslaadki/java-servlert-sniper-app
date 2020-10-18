@@ -3,7 +3,7 @@ let radiusValue = 0;
 
 let radius_is_installed = document.querySelector('#r_value').onclick = function (){
 
-    if (validate_checkbox(r_value,"R",1,5)){
+    if (validate_checkbox_withoutAlert(r_value,"R",1,5)){
         r_value.forEach(function (concrete_value) {
             if (concrete_value.checked) {
                 radiusValue = concrete_value.value;
@@ -31,9 +31,8 @@ let radius_is_installed = document.querySelector('#r_value').onclick = function 
             concrete_value.setAttribute('cx', String(arr_value[0]));
             concrete_value.setAttribute('cy', String(arr_value[1]));
         })
-
-
         return 1;
+
     }else return 0;
 }
 
@@ -47,7 +46,7 @@ document.querySelector('#svg_wrapper').onclick = function (event){
         let a = "?x_value=" + String(x_val) + "&y_value=" + String(y_val) + "&r_value=" + String(radiusValue);
         document.location.href = '/web_2-1.0-SNAPSHOT/webServlet' + a;
     }else{
-        alert('Необходимо задать значение R!');
+        alert('Необходимо задать значение R, причем единственное!');
     }
 }
 

@@ -63,3 +63,33 @@ function validate_checkbox(array_value, name, min_value, max_value) {
     }
     return false;
 }
+
+function validate_checkbox_withoutAlert(array_value, name, min_value, max_value) {
+    //переменная которая в итоге будет выбрана из всех checkbox'ов
+    let success_array_value = null;
+
+    //Проверка на выбор нескольких checkBox'ов
+    let i = 0;
+    array_value.forEach(function (concrete_value) {
+        if (concrete_value.checked) {
+            i++;
+            success_array_value = concrete_value.value;
+        }
+    })
+
+    //проверка на все остальное
+    if (success_array_value !== 'no' && success_array_value !== null) {
+        if (min_value <= success_array_value && success_array_value <= max_value && i === 1) {
+            return true;
+        } else {
+            if (i > 1) {
+                i = 0;
+            } else {
+            }
+        }
+    } else {
+    }
+    return false;
+}
+
+
