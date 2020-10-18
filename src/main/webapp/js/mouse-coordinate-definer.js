@@ -25,12 +25,11 @@ let radius_is_installed = document.querySelector('#r_value').onclick = function 
 
         r_changer.forEach(function (concrete_value) {
             let arr_value = concrete_value.getAttribute("xyr").valueOf().split(" ");
+            arr_value[0]=(150 + (arr_value[0]*120/radiusValue))
+            arr_value[1]=(150 + ((-1)*arr_value[1]*120/radiusValue))
 
-            arr_value[0]=(150 + (arr_value[0]*120/arr_value[2]))
-            arr_value[1]=(150 + (arr_value[1]*120/arr_value[2]))
-
-            concrete_value.setAttribute('cx', String(arr_value[0]*arr_value[2]/radiusValue));
-            concrete_value.setAttribute('cy', String(arr_value[1]*arr_value[2]/radiusValue));
+            concrete_value.setAttribute('cx', String(arr_value[0]));
+            concrete_value.setAttribute('cy', String(arr_value[1]));
         })
 
 
