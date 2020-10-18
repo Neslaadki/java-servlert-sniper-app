@@ -33,7 +33,19 @@
             <div class="block__item" id="itemBlockWithSVG">
                 <div class="block__svg" id="svg_wrapper">
                     <svg class='svg_axis' xmlns="http://www.w3.org/2000/svg" width="300" height="300">
-
+                        <%
+                            RequestDataList pointObj = (RequestDataList)pageContext.getServletContext().getAttribute("requestData");
+                            if(pointObj!=null) {
+                                int i = 5;
+                                for (RequestObj s : pointObj.getDataList()) {
+                                    out.println("<circle cx=\""+ s.getX()+"\" cy=\""+s.getY()+"\" r=\"9\" stroke=\"black\" stroke-width=\"3\" fill=\"red\" />");
+                                    i--;
+                                    if(i==0){
+                                        break;
+                                    }
+                                }
+                            }
+                        %>
                         <!-- draw axis - -->
                         <line x1="0" y1="150" x2="300" y2="150" stroke="#003"></line>
                         <line x1="150" y1="0" x2="150" y2="300" stroke="#003"></line>
