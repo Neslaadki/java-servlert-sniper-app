@@ -38,7 +38,7 @@
                             if(pointObj!=null) {
                                 int i = 5;
                                 for (RequestObj s : pointObj.getDataList()) {
-                                    out.println("<circle cx=\""+ s.getX()+"\" cy=\""+s.getY()+"\" r=\"9\" stroke=\"black\" stroke-width=\"3\" fill=\"red\" />");
+                                    out.println("<circle cx=\""+ ( 150 + (s.getX()*120/s.getR()))+"\" cy=\""+ (150 + ((-1) * s.getY()*120/s.getR())) +"\" r=\"9\" stroke=\"black\" stroke-width=\"3\" fill=\"red\" />");
                                     i--;
                                     if(i==0){
                                         break;
