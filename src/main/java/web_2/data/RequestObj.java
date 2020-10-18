@@ -63,7 +63,7 @@ public class RequestObj {
         if (x == null || y == null || r == null) throw new NullPointerException();
         else if ((x >= 0) && (y <= 0)) is_hit = (x <= r / 2) && (y >= -r);
         else if ((x >= 0) && (y >= 0)) is_hit = (x * x) + (y * y) <= (r / 2) * (r / 2);
-        else if ((x <= 0) && (y >= 0)) is_hit = (y / 2) - x == r / 2;
+        else if ((x <= 0) && (y >= 0)) is_hit = (y / 2) - x <= r / 2;
         else if ((x <= 0) && (y <= 0)) is_hit = false;
         long end = System.nanoTime();
         setMicroseconds(end-start);
