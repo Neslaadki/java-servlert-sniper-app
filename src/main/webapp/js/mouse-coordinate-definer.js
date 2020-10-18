@@ -24,12 +24,13 @@ let radius_is_installed = document.querySelector('#r_value').onclick = function 
         let r_changer = document.getElementsByName("points");
 
         r_changer.forEach(function (concrete_value) {
-            let r_value = concrete_value.getAttribute('r');
-            let x_value = concrete_value.getAttribute('cx');
-            let y_value = concrete_value.getAttribute('cy');
+            let arr_value = concrete_value.getAttribute("xyr").valueOf().split(" ");
 
-            concrete_value.setAttribute('cx', String(x_value*r_value/radiusValue));
-            concrete_value.setAttribute('cy', String(y_value*r_value/radiusValue))
+            arr_value[0]=(150 + (arr_value[0]*120/arr_value[2]))
+            arr_value[1]=(150 + (arr_value[1]*120/arr_value[2]))
+
+            concrete_value.setAttribute('cx', String(arr_value[0]*arr_value[2]/radiusValue));
+            concrete_value.setAttribute('cy', String(arr_value[1]*arr_value[2]/radiusValue));
         })
 
 
