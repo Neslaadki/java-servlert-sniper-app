@@ -60,6 +60,7 @@
                         <polygon points="90,150 150,30 150,150" fill="#00f" stroke="#003" fill-opacity="0.5"></polygon>
                         <rect height="120" width="60" x="150" y="150" fill-opacity="0.5" fill="#a0f" stroke="#003"></rect>
                         <path stroke="#003" d="M 270,150 L 150,150 L 150,90 A 60,60 0 0 1 210,150" fill-opacity="0.5"></path>
+
                     </svg>
                 </div>
             </div>
