@@ -139,8 +139,9 @@
                             </thead>
                                 <%
                                     RequestDataList names = (RequestDataList)pageContext.getServletContext().getAttribute("requestData");
-                                    if(names!=null) {
-                                        for (RequestObj s : names.getDataList()) {
+                                %>
+                                    <%if(names!=null) {%>
+                                    <%for (RequestObj s : names.getDataList()) {%>
                                             <%="<tbody>"%>
                                             <%="<td>" + s.getX() + "</td>"%>
                                             <%="<td>" + s.getY() + "</td>"%>
@@ -149,9 +150,8 @@
                                             <%="<td>" + s.getDate() + "</td>"%>
                                             <%="<td>" + s.getMicroseconds() + "</td>"%>
                                             <%="</tbody>"%>
-                                        }
-                                    }
-                                %>
+                                        <%}%>
+                                 <%}%>
                         </table>
                     </div>
                     <form action="Cleaner">
