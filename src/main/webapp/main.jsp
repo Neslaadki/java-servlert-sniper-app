@@ -141,14 +141,14 @@
                                     RequestDataList names = (RequestDataList)pageContext.getServletContext().getAttribute("requestData");
                                     if(names!=null) {
                                         for (RequestObj s : names.getDataList()) {
-                                            out.println("<tbody>");
-                                            out.println("<td>" + s.getX() + "</td>");
-                                            out.println("<td>" + s.getY() + "</td>");
-                                            out.println("<td>" + s.getR() + "</td>");
-                                            out.println("<td>" + s.isIs_hit() + "</td>");
-                                            out.println("<td>" + s.getDate() + "</td>");
-                                            out.println("<td>" + s.getMicroseconds() + "</td>");
-                                            out.println("</tbody>");
+                                            <%="<tbody>"%>
+                                            <%="<td>" + s.getX() + "</td>"%>
+                                            <%="<td>" + s.getY() + "</td>"%>
+                                            <%="<td>" + s.getR() + "</td>"%>
+                                            <%="<td>" + s.isIs_hit() + "</td>"%>
+                                            <%="<td>" + s.getDate() + "</td>"%>
+                                            <%="<td>" + s.getMicroseconds() + "</td>"%>
+                                            <%="</tbody>"%>
                                         }
                                     }
                                 %>
